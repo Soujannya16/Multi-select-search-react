@@ -1,0 +1,104 @@
+/* MultiselectSearchBar.css or MultiselectSearchBar.scss */
+
+.multiselect {
+  width: 70%;
+  margin: 40px auto;
+  display: block;
+}
+
+.selected-items {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.select-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: #aaa;
+  }
+}
+.select-box {
+  grid-area: 1 / 1 / 2 / 3;
+  color: rgb(128, 128, 128);
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: flex;
+  min-width: 0px;
+  background-color: #e0e0e0;
+  border-radius: 40px;
+  margin: 2px;
+  box-sizing: border-box;
+  color: "black";
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 4px;
+  justify-content: space-between;
+}
+.image-circle {
+  margin-right: 10px;
+}
+
+.image-circle img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.dropdown-content {
+  padding: 25px;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 50%;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.select-box input {
+  border: none;
+  outline: none; /* Remove the input outline on focus */
+  font-size: 14px; /* Set your preferred font size */
+}
+
+.select-box input::placeholder {
+  color: #aaa; /* Change the placeholder text color */
+}
+
+/* Optional: Style the search text as "abc" */
+.select-box input[type="text"].search-text {
+  font-style: italic; /* Use italic style */
+  font-weight: bold; /* Use bold weight */
+}
+
+/* ... (existing styles) */
+.chip.highlight {
+  background-color: #ccc;
+  color: black;
+  border: 1px solid #1c1cf1;
+}
